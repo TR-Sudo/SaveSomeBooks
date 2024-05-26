@@ -1,0 +1,29 @@
+.navbar>ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-weight: bold;
+    gap: 30px;
+    padding-top: 10px;
+    padding-right: 15px;
+    background-color: var(--navbar);
+    padding-bottom: 10px;
+}
+.navbar{
+    background-color: rgb(56, 56, 56);
+}
+.navbar>ul>li>a{
+    text-decoration: none;
+    color: white
+}
+.navbar>ul>li>a:hover{
+    color: greenyellow;
+}
+
+.navbar>ul>li>.active{
+    color: greenyellow;
+}
