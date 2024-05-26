@@ -12,7 +12,7 @@ export default function Books(){
     var [datepublished,SetDatePublished]=useState("Apr 26, 2005"); // saves date published
     var [isbn,SetISBN]=useState("0434413003") // used to find retrieve image,default is to kill a mockingbird
 
-    var [subject,SetSubject]= useState("Married people, fiction', 'American fiction (fictional works by one author)', 'Fiction, psychological', 'Long island (n.y.), fiction', 'Fiction', 'Rich people'")
+    var [subject,SetSubject]= useState("Married people, fiction, American fiction (fictional works by one author), Fiction, psychological")
 
     const subMitForm=async(e)=>{
         e.preventDefault();
@@ -30,6 +30,7 @@ export default function Books(){
                SetDatePublished(data['docs'][0]['publish_date'][0]);
                SetBookFound(true);
                SetISBN(data['docs'][0]['isbn'][0])
+               SetSubject(`${data['docs'][0]['subject'][0]},${data['docs'][0]['subject'][1]},${data['docs'][0]['subject'][2]}`)
                console.log(data['docs'][0])
 
             })
@@ -51,7 +52,8 @@ export default function Books(){
             </form>
             <div className='Main'>
                 <h3>Author: {authorfound}</h3>
-                <img src={`https://covers.openlibrary.org/b/isbn/${isbn}-M.jpg`} alt='Cover Image, Rate limited cover might not appear' />
+                <h3>Title: {titlefound}</h3>
+                <img src={`https://covers.openlibrary.org/b/isbn/${isbn}-M.jpg`} alt='Cover Image, rate limited cover may not appear' />
                 <h3>Subject: {subject}</h3>
                 <h3>Published date: {datepublished}</h3>
             </div>      
