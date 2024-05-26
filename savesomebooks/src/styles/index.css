@@ -60,7 +60,8 @@ form>button:hover{
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: rgb(56, 56, 56);
+  background-color: rgb(241, 241, 241);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   border-radius: 10px;
 }
 .Main>img{

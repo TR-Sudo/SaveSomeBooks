@@ -50,11 +50,10 @@ export default function Books(){
                 <button type='submit' className='Submit_Button'>Submit</button>
             </form>
             <div className='Main'>
-                <h2 style={{color:'white'}}>{bookfound ? <div></div> : <h2 style={{backgroundColor:"greenyellow", padding:'0',margin:"0",fontSize:"10px"}}>Default</h2>}{titlefound}</h2>
-                <img src={`https://covers.openlibrary.org/b/isbn/${isbn}-M.jpg`} />
-                <h3 style={{color:'white'}}>Author: {authorfound}</h3>
-                <h3 style={{color:'greenyellow',textAlign:'center'}}>Subject: {subject}</h3>
-                <h3 style={{color:'white'}}>Published date: {datepublished}</h3>
+                <h3>Author: {authorfound}</h3>
+                <img src={`https://covers.openlibrary.org/b/isbn/${isbn}-M.jpg`} alt='Cover Image, Rate limited cover might not appear' />
+                <h3>Subject: {subject}</h3>
+                <h3>Published date: {datepublished}</h3>
             </div>      
             
         </div>
